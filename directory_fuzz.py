@@ -16,6 +16,6 @@ for x in wordlist.readlines():
             print('[+]'+url+'\n')
             output.write('[+]'+url+'\n')
         else:
-            print('[-]'+url)
+            pass
     except Exception as e:
         print(e)
