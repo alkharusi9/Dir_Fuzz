@@ -1,3 +1,4 @@
+# Written by: Alsalt Alkharosi
 #!/usr/bin/python
 
 import sys,requests
