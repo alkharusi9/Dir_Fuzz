@@ -1,8 +1,6 @@
 # Written by: Alsalt Alkharosi
 #!/usr/bin/python
 
-#!/usr/bin/python
-
 import sys,requests
 
 class bcolors:
