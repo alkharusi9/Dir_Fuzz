@@ -32,6 +32,9 @@ print(bcolors.FAIL+"""%s
                 # Coded By Alsalt Alkharosi - @0x_pwner
     """+bcolors.ENDC)
 
+if len(sys.argv)!=3:
+    print(bcolors.WARNING+'Usage: dir_fuzz.py <ip-address> <wordlist>'+bcolors.ENDC)
+
 def Scanner():
     target = sys.argv[1]
     file_name = sys.argv[2]
