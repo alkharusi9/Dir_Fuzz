@@ -55,7 +55,7 @@ def Scanner():
                 print(e)
 
         except KeyboardInterrupt:
-                print('[*] You clicked CTRL+C to stop the attack')
+                print(bcolors.WARNING+'[-] You clicked CTRL+C to kill the process'+bcolors.ENDC)
                 break
 
 
