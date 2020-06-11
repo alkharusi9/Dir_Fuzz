@@ -56,7 +56,7 @@ def Scanner():
                 print(bcolors.OKGREEN+'[+]'+url+'\n'+bcolors.ENDC)
                 output.write(bcolors.OKGREEN+'[+]'+url+'\n'+bcolors.ENDC)
             else:
-                print(bcolors.FAIL+'[-]'+url+bcolors.ENDC) # You could change this 'pass' if you think the output is confusing.
+                print(bcolors.FAIL+'[-]'+url+bcolors.ENDC) # You could change this to 'pass' if you think the output is confusing.
         except Exception as e:
                 print(e)
 
