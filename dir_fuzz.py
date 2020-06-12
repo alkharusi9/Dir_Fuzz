@@ -3,6 +3,8 @@
 import sys,requests
 import time
 
+
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -14,39 +16,38 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
-print(bcolors.FAIL+"""%s     
-                 _                                   _____________
-                | |                                 |  ___________|
-                | |                                 |  |           
-                | |                                 |  |                                     __________      ___________
-                | |                                 |  |__________                          |_______   |    |_________  |
-                | |                                 |  |__________|                                /  /              /  /
-      __________| |     __                          |  |                                          /  /              /  /
-     |   _______| |    |__|     __                  |  |              __        __               /  /              /  /
-     |  |       | |     __     |  |_____            |  |             |  |      |  |             /  /              /  /
-     |  |       | |    |  |    |   _____|           |  |             |  |      |  |            /  /              /  /
-     |  |       | |    |  |    |  |                 |  |             |  |______|  |           /  /              /  /
-     |  |_______| |    |  |    |  |     _________   |  |             |            |          /  /              /  /
-     |__________|_|    |__|    |__|    |_________|  |__|             |_________   |         /  /______        /  /_______
-                                                                               |  |        /__________|      /___________|    
-                |%s%s                                                          |__|
-                # Coded By Alsalt Alkharosi - @0x_pwner
-    """+bcolors.ENDC)
-
-if len(sys.argv)!=3:
-    print(bcolors.WARNING+'Usage: dir_fuzz.py <ip-address> <wordlist>'+bcolors.ENDC)
-
-print(bcolors.OKBLUE+'[!] Please wait, looking for valid directories....'+bcolors.ENDC)
-time.sleep(1)
-print(bcolors.OKBLUE+'[!] The tool is still scanning.....'+bcolors.ENDC)
-time.sleep(2)
-
 def Scanner():
+    print(bcolors.FAIL + """%s     
+                     _                                   _____________
+                    | |                                 |  ___________|
+                    | |                                 |  |           
+                    | |                                 |  |                                     __________      ___________
+                    | |                                 |  |__________                          |_______   |    |_________  |
+                    | |                                 |  |__________|                                /  /              /  /
+          __________| |     __                          |  |                                          /  /              /  /
+         |   _______| |    |__|     __                  |  |              __        __               /  /              /  /
+         |  |       | |     __     |  |_____            |  |             |  |      |  |             /  /              /  /
+         |  |       | |    |  |    |   _____|           |  |             |  |      |  |            /  /              /  /
+         |  |       | |    |  |    |  |                 |  |             |  |______|  |           /  /              /  /
+         |  |_______| |    |  |    |  |     _________   |  |             |            |          /  /              /  /
+         |__________|_|    |__|    |__|    |_________|  |__|             |_________   |         /  /______        /  /_______
+                                                                                   |  |        /__________|      /___________|    
+                    |%s%s                                                          |__|
+                    # Coded By Alsalt Alkharosi - @0x_pwner
+        """ + bcolors.ENDC)
+
+    if len(sys.argv) != 3:
+        print(bcolors.WARNING + 'Usage: dir_fuzz.py <ip-address> <wordlist>' + bcolors.ENDC)
+
     target = sys.argv[1]
     file_name = sys.argv[2]
     wordlist = open(file_name,'r')
     output = open('targets.vcs','w')
 
+    print(bcolors.OKBLUE + '[!] Please wait, looking for valid directories....' + bcolors.ENDC)
+    time.sleep(1)
+    print(bcolors.OKBLUE + '[!] The tool is still scanning.....' + bcolors.ENDC)
+    time.sleep(2)
     for x in wordlist.readlines():
         try:
             directory = x.strip('\n')
@@ -56,13 +57,14 @@ def Scanner():
                 print(bcolors.OKGREEN+'[+]'+url+'\n'+bcolors.ENDC)
                 output.write(bcolors.OKGREEN+'[+]'+url+'\n'+bcolors.ENDC)
             else:
-                print(bcolors.FAIL+'[-]'+url+bcolors.ENDC) # You could change this to 'pass' if you think the output is confusing.
+                print(bcolors.FAIL+'[-]'+url+bcolors.ENDC)
         except Exception as e:
                 print(e)
 
         except KeyboardInterrupt:
                 print(bcolors.WARNING+'[-] You clicked CTRL+C to stop the scan!'+bcolors.ENDC)
                 break
+
 
 
 if __name__=='__main__':
