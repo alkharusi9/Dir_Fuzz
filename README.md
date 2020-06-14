@@ -1,3 +1,3 @@
-# Dir_Fuzz
-This simple script could be used by peneteration testers and security researchers to find hidden directories. This is just a startup and more features, and functionalities are coming up. The script takes two arguments, IP-address and a wordlist, so make sure you have a good wordlist in place to start the attack, comments and feedbacks are appreciated.
+# Kraken
+This simple script could be used by peneteration testers and security researchers to find hidden directories, find if the target is vulnreable to XSS attacks, and Click_Jacking attacks. This is just a startup and more features, and functionalities are coming up. The script asks for the target's domain names to start working, and then it will ask for a wordlist if ( Find hidden directories option is chosen so make sure you have a good wordlist in place to start the attack), comments and feedbacks are appreciated.
 Disclaimer: This tool should be used for educational purposes only, and I don't take responsibilty for any misuse.
