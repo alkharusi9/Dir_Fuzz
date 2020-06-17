@@ -46,7 +46,7 @@ def banner():
             """ + bcolors.ENDC)
 
 
-target = input(bcolors.WARNING + "Enter the target's domain name:" + bcolors.ENDC)
+target = input(bcolors.WARNING + "Enter the target's domain name(Please don't include 'https://'):" + bcolors.ENDC)
 ip_add = socket.gethostbyname(target)
 print('The IP Address for the target is:',ip_add)
 choice = input(''' 
