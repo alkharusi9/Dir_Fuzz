@@ -182,7 +182,7 @@ def main():
     if choice == '1':
         return nScanner()
 
-    if choice == '2':
+    elif choice == '2':
         return dirFuzz()
 
     elif choice == '3':
@@ -190,7 +190,8 @@ def main():
 
     elif choice == '4':
         return clickJacking()
-
+    else:
+        print(bcolors.FAIL+'[!] Please choose a valid option!'+bcolors.ENDC)
 
 if __name__ == '__main__':
     main()
