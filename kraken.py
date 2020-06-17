@@ -58,7 +58,7 @@ def Scanner():
 
     print(bcolors.OKBLUE + '[!] Please wait, looking for valid directories....' + bcolors.ENDC)
     time.sleep(1)
-    print(bcolors.OKBLUE + '[!] The tool is still scanning.....' + bcolors.ENDC)
+    print(bcolors.OKBLUE + '[!] Still scanning.....' + bcolors.ENDC)
     time.sleep(2)
     for x in wordlist.readlines():
         try:
