@@ -150,8 +150,8 @@ def XSS_vulnerbality():
             print(bcolors.FAIL + '[!]' + url, 'is vulnerable to XSS attack' + bcolors.ENDC)
     except KeyboardInterrupt:
         print(bcolors.FAIL + '[!] You clicked CTRL+C to stop the scan!' + bcolors.ENDC)
-    except:
-        print(bcolors.FAIL + "[!] Something went wrong!" + bcolors.ENDC)
+    except Exception as e:
+        print(bcolors.FAIL + e + bcolors.ENDC)
 
 
 def clickJacking():
