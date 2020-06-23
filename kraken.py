@@ -7,10 +7,17 @@ import socket
 
 try:
     import nmap
-except:
-    print("Make sure you install nmap library first with this command 'pip install python-nmap'")
+except ImportError:
+    import os
+    print("The python-nmap library is not isntalled, installing now!")
+    os.system('pip3 install python-nmap')
+    print('[!] The nmap library has been installed, please restart kraken!')
+    quit()
+except ImportError:
+    print('It seems the nmap library was not installed, please try intsall it manually')     
+    quit()
 
-
+    
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
