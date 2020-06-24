@@ -13,8 +13,8 @@ except ImportError:
     os.system('pip3 install python-nmap')
     print('[!] The nmap library has been installed, please restart kraken!')
     quit()
-except ImportError:
-    print('It seems the nmap library was not installed, please try intsall it manually')     
+except Exception:
+    print('It seems the nmap library was not installed, please try intsalling it manually')     
     quit()
 
     
@@ -32,21 +32,21 @@ def banner():
     print(bcolors.FAIL + """%s     
 
 
-             &&       %%                                &&       %%                   &&%            &&
-             &&      %%                                 &&      %%                    &&%%           &&
-             &&     %%                                  &&     %%                     && %%          && 
-             &&    %%                                   &&    %%                      &&  %%         &&
-             &&   %%                                    &&   %%                       &&   %%        &&
-             &&  %%                                     &&  %%                        &&    %%       &&
-             && %%                                      && %%                         &&     %%      &&
-             &&%%%                                      &&%%                          &&      %%     &&
-             && %%                                  %   &&%%          &&&&&&&&&&      &&       %%    &&
-             &&  %%           %% %%%%%    %%%%%%%%%%    && %%        &&         &&    &&        %%   &&
-             &&    %%         %%%       %%        %%    &&  %%       &&         &&    &&         %%  &&
-             &&     %%        %%        %%        %%    &&   %%      &&&&&&&&&&&&     &&          %% &&
-             &&       %%      %%        %%        %%    &&    %%     &&               &&           %%&&
-             &&        %%     %%        %%        %%    &&     %%    &&               &&            %&&
-             &&         %%    %%         %%%%%%%%%%%%   &&      %%    %&&&&&&&&&      &&             %&
+             &&       %%                                &&       %%                               
+             &&      %%                                 &&      %%                    &%%           &&
+             &&     %%                                  &&     %%                     &&%%          && 
+             &&    %%                                   &&    %%                      && %%         &&
+             &&   %%                                    &&   %%                       &&  %%        &&
+             &&  %%                                     &&  %%                        &&   %%       &&
+             && %%                                      && %%                         &&    %%      &&
+             &&%%%                                      &&%%                          &&     %%     &&
+             && %%                                  %   &&%%          &&&&&&&&&&      &&      %%    &&
+             &&  %%           %% %%%%%    %%%%%%%%%%    && %%        &&         &&    &&       %%   &&
+             &&    %%         %%%       %%        %%    &&  %%       &&         &&    &&        %%  &&
+             &&     %%        %%        %%        %%    &&   %%      &&&&&&&&&&&&     &&         %% &&
+             &&       %%      %%        %%        %%    &&    %%     &&               &&          %%&&
+             &&        %%     %%        %%        %%    &&     %%    &&               &&           %&&
+             &&         %%    %%         %%%%%%%%%%%%   &&      %%    %&&&&&&&&&      &&            %&
                                                      %%
                         |%s%s                                                          
                         # Coded By Alsalt Alkharosi - @0x_pwner
