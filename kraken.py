@@ -10,7 +10,7 @@ try:
 except ImportError:
     import os
     print("The python-nmap library is not installed, installing now!")
-    os.system('pip3 install python-nmap')
+    os.system('pip install python-nmap')
     print('[!] The nmap library has been installed, please restart kraken!')
     quit()
 except Exception:
