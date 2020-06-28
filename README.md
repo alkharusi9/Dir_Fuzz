@@ -1,7 +1,7 @@
 # Kraken
 This simple script could be used by peneteration testers and security researchers to:
 1) Scan for open ports using nmap library.
-2) Find subdomains. 
+2) Find hidden directories. 
 3) Find if the target is vulnreable to XSS attacks. 
 4) Find if the target is vulnerable to Click_Jacking attacks. 
 
