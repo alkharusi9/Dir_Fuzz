@@ -59,8 +59,9 @@ print('The IP Address for the target is:',ip_add)
 choice = input(''' 
     1) nmap Scan  
     2) Find hidden directories
-    3) XSS vulnerbality 
-    4) Click-jacking attack
+    3) Find subdomians
+    4) XSS vulnerbality 
+    5) Click-jacking attack
     Choose one of the above: ''')
 
 
@@ -143,6 +144,28 @@ def dirFuzz():
             break
 
 
+def sub_finder():
+    global target 
+    filename = input(bcolors.WARNING+'Enter the filename:'+bcolors.ENDC)
+    file = open(filename,'r')
+    output = open('subdomains.vcs','w')
+    print(bcolors.FAIL+'[*] Scanning for subdomains'+bcolors.ENDC)
+    time.sleep(3)
+    print(bcolors.FAIL+'[*] This might take few minutes...'+bcolors.ENDC)
+
+    for subdomain in file.readlines():
+
+            directory = subdomain.strip('\n')
+            url = 'https://'+directory+'.'+ target
+            try:
+                requests.get(url)
+            except requests.ConnectionError:
+                pass
+            else:
+                print(bcolors.OKGREEN+'[+]' + url+bcolors.ENDC)
+                output.write('[+]'+url+'\n')
+                
+            
 def XSS_vulnerbality():
     global target
     try:
@@ -188,14 +211,14 @@ def main():
 
     if choice == '1':
         return nScanner()
-
     elif choice == '2':
         return dirFuzz()
 
     elif choice == '3':
-        return XSS_vulnerbality()
-
+        return sub_finder()
     elif choice == '4':
+        return XSS_vulnerbality()
+    elif choice == '5':
         return clickJacking()
     else:
         print(bcolors.FAIL+'[!] Please choose a valid option!'+bcolors.ENDC)
