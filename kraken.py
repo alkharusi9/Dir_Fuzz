@@ -110,8 +110,8 @@ def nScanner():
             print('Please choose a valid option')
     except KeyboardInterrupt:
         print('CTRL+C was clicked to stop the scan!')
-    except:
-        print('Something went wrong!')
+    except Exception as e:
+        print(e)
 
 
 def dirFuzz():
