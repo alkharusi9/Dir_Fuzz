@@ -174,10 +174,9 @@ def XSS_vulnerbality():
         print(bcolors.WARNING + '[*] Now Scanning....' + bcolors.ENDC)
         time.sleep(2)
         if 'X-XSS-Protection' in r.headers:
-            print(bcolors.OKGREEN + '[!]' + url,
-                  'is not vulnerable to XSS attack, however you may try few payloads!' + bcolors.ENDC)
+            print(bcolors.OKGREEN + '[!] X-XSS-Protection header exists!' + bcolors.ENDC)
         else:
-            print(bcolors.FAIL + '[!]' + url, 'is vulnerable to XSS attack' + bcolors.ENDC)
+            print(bcolors.FAIL + '[!] X-XSS-Protection header does not exist!' + bcolors.ENDC)
     except KeyboardInterrupt:
         print(bcolors.FAIL + '[!] You clicked CTRL+C to stop the scan!' + bcolors.ENDC)
     except Exception as e:
